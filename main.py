@@ -23,7 +23,7 @@ class IRCTC:
        2.Train number.
        3. Date in YYYYMMDD format'''
     def fetch_data(self,train_number):
-        data = requests.get("http://indianrailapi.com/api/v2/livetrainstatus/apikey/<>/trainnumber/<>/date/<>/")
+        data = requests.get("http://indianrailapi.com/api/v2/livetrainstatus/apikey/<>/trainnumber/{}/date/<>/".format(train_number))
 
         data =data.json()
         print(data)
